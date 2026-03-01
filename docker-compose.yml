@@ -1,0 +1,12 @@
+name: namonexus-fusion
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: namonexus-fusion:latest
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    init: true

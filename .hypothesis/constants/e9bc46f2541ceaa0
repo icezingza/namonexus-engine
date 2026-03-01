@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\explainability.py
+# hypothesis_version: 6.151.9
+
+[-1e-06, 0.0, 1e-12, 1e-06, 0.5, 1.0, 2.0, 5.0, 10.0, 100, 512, '4.1.0', 'ExplanationConfig', 'affected', 'alpha', 'audit_version', 'baseline_score', 'beta', 'confidence', 'decreased', 'did not shift', 'direction', 'en', 'explanation', 'fused_score', 'increased', 'modality', 'modality_history', 'narrative', 'negative', 'neutral', 'phi_weight', 'positive', 'raw_shapley', 'risk_level', 'score', 'th', 'timestamp', 'total_shift', 'uncertainty', 'unknown', 'weighted_shapley', 'คง', 'ลด', 'เพิ่ม', '─', '▲', '▼']

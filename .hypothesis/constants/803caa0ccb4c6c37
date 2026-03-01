@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\temporal_golden_fusion.py
+# hypothesis_version: 6.151.9
+
+['?', 'TemporalGoldenFusion', 'confidence', 'failures', 'lambda', 'learned_prior', 'metadata', 'modality', 'n_trials', 'score', 'successes', 'temporal']

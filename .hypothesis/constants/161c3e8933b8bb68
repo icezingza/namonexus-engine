@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\golden_bayesian.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.5, 0.95, 1.0, 2.0, '?', 'FusionState', 'GoldenBayesianFusion', 'confidence', 'critical', 'failures', 'high', 'low', 'medium', 'metadata', 'modality', 'n_trials', 'score', 'successes']

@@ -1,0 +1,22 @@
+# NamoNexus Fusion Engine — Development Requirements
+-r requirements.txt
+
+# Testing
+pytest>=7.0
+pytest-asyncio>=0.21
+pytest-cov>=4.0
+
+# Code quality
+black>=23.0
+isort>=5.12
+ruff>=0.1
+
+# Type checking
+mypy>=1.5
+
+# Security scanning
+pip-audit>=2.7
+
+# Optional streaming adapters
+kafka-python>=2.0
+websockets>=11.0

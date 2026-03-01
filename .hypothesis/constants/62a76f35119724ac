@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\modality_calibrator.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.1, 0.3, 0.5, 1.0, 200, ', ', 'ALL', 'modality', 'n_updates', 'reward_rate', 'tau_alpha', 'tau_beta', 'trust_mean', 'trust_uncertainty']

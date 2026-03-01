@@ -1,0 +1,361 @@
+Metadata-Version: 2.4
+Name: namonexus-fusion
+Version: 4.0.0
+Summary: Patent-pending multimodal Bayesian fusion engine anchored on the Golden Ratio. Supports temporal decay, empirical prior learning, modality auto-calibration, sensor trust scoring, drift detection, streaming inference, Shapley XAI, and hierarchical Bayesian federated learning.
+Home-page: https://github.com/namonexus/namonexus-fusion
+Author: NamoNexus Research Team
+Author-email: research@namonexus.ai
+License: Proprietary
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE.txt
+Requires-Dist: numpy<3.0,>=1.26.0
+Requires-Dist: scipy<2.0,>=1.11.0
+Requires-Dist: numba<1.0,>=0.59.0
+Requires-Dist: cryptography<47.0.0,>=43.0.1
+Requires-Dist: aiofiles<25.0.0,>=23.2.1
+Requires-Dist: pydantic<3.0.0,>=2.9.0
+Requires-Dist: pydantic-settings<3.0.0,>=2.2.1
+Requires-Dist: cachetools<7.0.0,>=5.3.0
+Requires-Dist: fastapi<1.0.0,>=0.116.0
+Requires-Dist: starlette<1.0.0,>=0.47.2
+Requires-Dist: uvicorn<1.0.0,>=0.30.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: isort>=5.12; extra == "dev"
+Requires-Dist: mypy>=1.5; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
+Requires-Dist: pip-audit>=2.7; extra == "dev"
+Provides-Extra: streaming
+Requires-Dist: kafka-python>=2.0; extra == "streaming"
+Requires-Dist: websockets>=11.0; extra == "streaming"
+Provides-Extra: all
+Requires-Dist: kafka-python>=2.0; extra == "all"
+Requires-Dist: websockets>=11.0; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# NamoNexus Fusion Engine
+
+> **Patent Pending** · Proprietary & Confidential · © 2026 NamoNexus Research Team
+
+A production-ready multimodal Bayesian fusion engine that uses the **Golden Ratio (φ ≈ 1.618034)** as a structural mathematical constant across all layers — from the initial prior to drift detection thresholds to federated learning blending coefficients.
+
+---
+
+## Overview
+
+| Phase | Claims | Key Capability | φ Anchor |
+|-------|--------|----------------|----------|
+| v3.0 (Base) | 1–5 | Beta conjugate posterior, credible interval, deception detection, state serialisation | α₀/β₀ = φ |
+| Phase 1 | 6–7 | Temporal forgetting (λ₀ = 1/φ), personalised prior via φ-regularised MLE | λ₀ = 1/φ |
+| Phase 2 | 8–10 | Modality auto-calibration, sensor trust scoring, online hyperparameter optimisation | τ_α/τ_β = φ |
+| Phase 3 | 11–12 | Drift detection (h = φ², δ = 1/φ²), streaming with at-least-once delivery | h = φ², δ = 1/φ² |
+| Phase 4 | 13–14 | Shapley XAI (thresholds 1/φ and 1/φ²), hierarchical Bayesian + federated learning | ρ = 0.5 at n = φ²τ |
+
+---
+
+## Installation
+
+```bash
+# From source (development)
+git clone https://github.com/namonexus/namonexus-fusion.git
+cd namonexus-fusion
+pip install -e ".[dev]"
+
+# Production install
+pip install .
+```
+
+**Requirements:** Python ≥ 3.9, NumPy, SciPy
+
+---
+
+## API Security Configuration
+
+Set these environment variables before deploying `api.py`:
+
+```bash
+export NAMONEXUS_API_KEY="<strong-random-key>"
+export NAMONEXUS_ALLOWED_ORIGINS="https://app.example.com"
+export NAMONEXUS_LAWFUL_BASIS="contract"
+```
+
+Notes:
+- `NAMONEXUS_API_KEY` is required in production.
+- Keep `NAMONEXUS_ALLOW_INSECURE_DEV_KEY=false` outside local development.
+- Do not send secrets/PII inside `metadata` payloads.
+
+---
+
+## Quick Start
+
+```python
+from namonexus_fusion import NamoNexusEngine
+
+# Create engine — Golden Ratio prior initialised automatically
+engine = NamoNexusEngine()
+
+# Multimodal observation update
+engine.update(0.85, 0.70, "text")    # (score, confidence, modality)
+engine.update(0.25, 0.90, "voice")
+engine.update(0.60, 0.85, "face")
+
+# Results
+print(engine.fused_score)    # Bayesian posterior mean, e.g. 0.5423
+print(engine.risk_level())   # "low" | "medium" | "high" | "critical"
+lo, hi = engine.credible_interval()
+print(f"95% CI: [{lo:.3f}, {hi:.3f}]")
+
+# Full session summary (JSON-serialisable)
+summary = engine.session_summary()
+```
+
+---
+
+## Batch Update
+
+```python
+engine.update_batch([
+    {"score": 0.85, "confidence": 0.70, "modality": "text"},
+    {"score": 0.25, "confidence": 0.90, "modality": "voice"},
+    {"score": 0.60, "confidence": 0.85, "modality": "face"},
+])
+```
+
+---
+
+## Phase 1 — Personalised Prior
+
+```python
+from namonexus_fusion import NamoNexusEngine
+from namonexus_fusion.core import (
+    EmpiricalPriorLearner, SyntheticSessionGenerator, SubjectProfile,
+)
+
+# Generate synthetic historical data (replace with real sessions in production)
+gen      = SyntheticSessionGenerator(seed=42)
+profiles = [SubjectProfile("user_calm", baseline_score=0.80)]
+sessions = gen.generate(profiles, sessions_per_subject=20)
+
+# Fit personalised prior
+learner = EmpiricalPriorLearner()
+learner.add_sessions(sessions)
+prior = learner.fit("user_calm")
+
+# Warm-start the engine with the personalised prior
+engine = NamoNexusEngine(learned_prior=prior)
+engine.update(0.80, 0.70, "text")
+print(f"Prior mean: {prior.prior_mean:.4f}, Fused: {engine.fused_score:.4f}")
+```
+
+---
+
+## Phase 3 — Streaming Inference
+
+```python
+from namonexus_fusion import NamoNexusEngine
+from namonexus_fusion.core import StreamingObservation, InMemoryConnector
+
+engine = NamoNexusEngine()
+pipeline = engine.stream()
+
+observations = [
+    StreamingObservation(score=0.8, confidence=0.9, modality="text"),
+    StreamingObservation(score=0.3, confidence=0.7, modality="voice"),
+    StreamingObservation(score=0.6, confidence=0.8, modality="face"),
+]
+
+results = pipeline.run_sync(InMemoryConnector(observations))
+for r in results:
+    print(r.fused_score, r.risk_level, r.window_stats.risk_trend)
+
+# Drift detection
+if engine.has_drift_alarm:
+    print("Drift detected:", engine.drift_events())
+```
+
+---
+
+## Phase 4 — Explainability (GDPR / PDPA Compliance)
+
+```python
+engine = NamoNexusEngine()
+engine.update(0.85, 0.70, "text")
+engine.update(0.25, 0.90, "voice")
+engine.update(0.60, 0.85, "face")
+
+report = engine.explain(metadata={"session_id": "sess_001"})
+
+# Human-readable compliance text
+print(report.summary_text)
+
+# Per-modality Shapley attributions
+for attr in report.modality_attributions:
+    print(f"{attr.modality}: φ={attr.shapley_value:.4f} ({attr.alignment.value})")
+
+# GDPR Article 22 / PDPA Section 40 audit record
+import json
+audit = report.to_dict()
+print(json.dumps(audit, indent=2))
+```
+
+---
+
+## Phase 4 — Hierarchical Bayesian & Federated Learning
+
+```python
+from namonexus_fusion import NamoNexusEngine
+from namonexus_fusion.core import HierarchicalBayesianModel
+
+# Site A
+model_a = HierarchicalBayesianModel(site_id="site_a")
+engine_a = NamoNexusEngine(hierarchical_model=model_a, subject_id="user_001")
+engine_a.update(0.8, 0.9, "text")
+engine_a.update(0.4, 0.7, "voice")
+engine_a.commit_session()
+
+# Export federated delta — no raw data transmitted
+delta_a = model_a.export_federated_delta()
+
+# Site B
+model_b = HierarchicalBayesianModel(site_id="site_b")
+engine_b = NamoNexusEngine(hierarchical_model=model_b, subject_id="user_002")
+engine_b.update(0.7, 0.85, "text")
+engine_b.commit_session()
+delta_b = model_b.export_federated_delta()
+
+# Coordinator aggregates (φ structural constraint enforced automatically)
+coordinator = HierarchicalBayesianModel(site_id="coordinator")
+coordinator.aggregate_federated_deltas([delta_a, delta_b])
+
+# New user warm-starts from the enriched population prior
+new_engine = NamoNexusEngine(
+    hierarchical_model=coordinator,
+    subject_id="new_user",
+)
+```
+
+---
+
+## Architecture
+
+```
+namonexus_fusion/
+├── engine.py                    ← NamoNexusEngine (recommended entry point)
+├── core/
+│   ├── constants.py             ← φ, 1/φ, ENGINE_VERSION
+│   ├── exceptions.py            ← Exception hierarchy
+│   ├── golden_bayesian.py       ← GoldenBayesianFusion  [Claims 1–5]
+│   ├── temporal_filter.py       ← TemporalBayesianFilter [Claim 6]
+│   ├── empirical_prior.py       ← EmpiricalPriorLearner  [Claim 7]
+│   ├── temporal_golden_fusion.py← TemporalGoldenFusion (Phase 1 engine)
+│   ├── modality_calibrator.py   ← ModalityCalibrator     [Claim 8]
+│   ├── sensor_trust_scorer.py   ← SensorTrustScorer      [Claim 9]
+│   ├── hyperopt.py              ← OnlineHyperparamOptimizer [Claim 10]
+│   ├── phase2_fusion.py         ← Phase2GoldenFusion (Phase 2 engine)
+│   ├── drift_detector.py        ← DriftDetector           [Claim 11]
+│   ├── streaming_pipeline.py    ← StreamingPipeline       [Claim 12]
+│   ├── phase3_fusion.py         ← Phase3GoldenFusion (Phase 3 engine)
+│   ├── explainability.py        ← ExplainabilityLayer     [Claim 13]
+│   ├── hierarchical_bayesian.py ← HierarchicalBayesianModel [Claim 14]
+│   └── phase4_fusion.py         ← Phase4GoldenFusion (Phase 4 engine)
+├── config/
+│   └── settings.py              ← FusionConfig dataclass
+├── utils/
+│   └── validators.py            ← Input validation
+└── tests/
+    ├── test_phase1.py           ← Phase 1 test suite
+    ├── test_phase2.py           ← Phase 2 test suite
+    ├── test_phase3.py           ← Phase 3 test suite
+    └── test_phase4.py           ← Phase 4 test suite
+```
+
+---
+
+## Running Tests
+
+```bash
+# All tests
+pytest namonexus_fusion/tests/ -v
+
+# Specific phase
+pytest namonexus_fusion/tests/test_phase1.py -v
+pytest namonexus_fusion/tests/test_phase4.py -v
+
+# With coverage
+pytest namonexus_fusion/tests/ --cov=namonexus_fusion --cov-report=term-missing
+```
+
+---
+
+## SBOM and Compliance Artifacts
+
+```bash
+python scripts/generate_sbom.py --requirements requirements.txt --output artifacts/sbom.cdx.json
+```
+
+Release checklist: `docs/COMPLIANCE_CHECKLIST.md`.
+
+---
+
+## Golden Ratio Structural Invariants
+
+The following mathematical identities underpin all fourteen patent claims:
+
+| Identity | Value | Usage in Engine |
+|----------|-------|-----------------|
+| φ = (1+√5)/2 | ≈ 1.618034 | Prior ratio α₀/β₀, population prior |
+| φ² = φ + 1 | ≈ 2.618034 | CUSUM threshold h; population prior strength |
+| 1/φ = φ − 1 | ≈ 0.618034 | Default forgetting factor λ₀ |
+| 1/φ² = 2 − φ | ≈ 0.381966 | CUSUM sensitivity δ; XAI CONSISTENT threshold |
+| 1/φ + 1/φ² = 1 | — | XAI alignment thresholds partition [0,1] |
+| ρ = 0.5 at n = φ²τ | — | Hierarchical blending transition point |
+
+---
+
+## Patent Status
+
+**Patent Pending** — Full application covering 14 claims filed.  
+All claims have enabling disclosure backed by this codebase.
+
+| Claims | Phase | Status |
+|--------|-------|--------|
+| 1–5 | v3.0 Foundation | ✅ Implemented & tested |
+| 6–7 | Phase 1 | ✅ Implemented & tested |
+| 8–10 | Phase 2 | ✅ Implemented & tested |
+| 11–12 | Phase 3 | ✅ Implemented & tested |
+| 13–14 | Phase 4 | ✅ Implemented & tested |
+
+---
+
+## License
+
+Proprietary and Confidential. All rights reserved. © 2026 NamoNexus Research Team.  
+Patent Pending. Unauthorised use, copying, or distribution is prohibited.  
+See `LICENSE` for proprietary terms and `NOTICE.txt` for third-party attributions.

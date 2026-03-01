@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\engine.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.5, 1.0, 2.0, 5.0, 'NamoNexusEngine', '_alpha0', '_beta0', '_records', 'calibration', 'calibration_report', 'confidence', 'credible_interval', 'dominant_modality', 'drift', 'drift_summary', 'explanation', 'fused_score', 'lower', 'metadata', 'modality', 'modality_count', 'modality_name', 'risk_level', 'score', 'subject_id', 'summary_text', 'total_observations', 'trust', 'trust_report', 'uncertainty', 'upper', 'version', 'xai']

@@ -1,0 +1,197 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-02-22T22:12:37+00:00",
+    "tools": [
+      {
+        "vendor": "NamoNexus",
+        "name": "generate_sbom.py"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "namonexus-fusion",
+      "version": "4.0.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "1.26.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/numpy@1.26.3",
+      "supplier": {
+        "name": "Travis E. Oliphant et al."
+      }
+    },
+    {
+      "type": "library",
+      "name": "scipy",
+      "version": "1.16.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/scipy@1.16.3",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "numba",
+      "version": "0.63.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/numba@0.63.1",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "version": "46.0.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNKNOWN"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/cryptography@46.0.5",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "aiofiles",
+      "version": "23.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "License :: OSI Approved :: Apache Software License"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/aiofiles@23.2.1",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "pydantic",
+      "version": "2.9.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pydantic@2.9.2",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "pydantic-settings",
+      "version": "2.12.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pydantic-settings@2.12.0",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "cachetools",
+      "version": "6.2.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/cachetools@6.2.2",
+      "supplier": {
+        "name": "Thomas Kemmer"
+      }
+    },
+    {
+      "type": "library",
+      "name": "fastapi",
+      "version": "0.109.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/fastapi@0.109.0",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "starlette",
+      "version": "0.35.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/starlette@0.35.1",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    },
+    {
+      "type": "library",
+      "name": "uvicorn",
+      "version": "0.27.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/uvicorn@0.27.0",
+      "supplier": {
+        "name": "UNKNOWN"
+      }
+    }
+  ]
+}

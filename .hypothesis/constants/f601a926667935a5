@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\phase4_fusion.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.45, 0.5, 0.75, 1.0, 2.0, 5.0, 10.0, 'Phase3GoldenFusion', 'Phase4GoldenFusion', '_MinimalStub', 'alpha', 'beta', 'client_id', 'confidence', 'config', 'drift_alarm_count', 'explainability', 'fused_score', 'hierarchical', 'hierarchical_gap', 'high', 'last_report', 'local_score', 'low', 'medium', 'modality', 'modality_history', 'phase4', 'population_agg_count', 'population_mean', 'risk_level', 'score', 'to_dict', 'uncertainty', 'unknown']

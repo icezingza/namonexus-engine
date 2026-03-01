@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\failover.py
+# hypothesis_version: 6.151.9
+
+['active_sensors', 'calibration_status', 'drift_status', 'dropped_observations']

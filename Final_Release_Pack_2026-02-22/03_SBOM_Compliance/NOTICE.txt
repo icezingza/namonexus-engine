@@ -1,0 +1,26 @@
+NamoNexus Fusion Engine
+Copyright (c) 2026 Kanin Raksaraj (P'Ice). All rights reserved.
+
+This product includes third-party open-source components.
+Each component remains under its original license terms.
+
+Runtime dependencies
+1. NumPy - BSD-3-Clause
+2. SciPy - BSD-3-Clause
+3. Numba - BSD-2-Clause
+4. Cryptography - Apache-2.0 OR BSD-3-Clause
+5. Aiofiles - Apache-2.0
+6. Pydantic - MIT
+7. pydantic-settings - MIT
+8. cachetools - MIT
+9. FastAPI - MIT
+10. Starlette - BSD-3-Clause
+11. Uvicorn - BSD-3-Clause
+
+Optional dependencies
+1. kafka-python - Apache-2.0
+2. websockets - BSD-3-Clause
+
+Distribution requirement
+- Include this NOTICE file in source and binary redistributions.
+- Preserve all applicable third-party copyright and license notices.

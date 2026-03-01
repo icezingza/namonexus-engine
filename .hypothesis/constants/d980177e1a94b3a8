@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\sensor_trust_scorer.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.2, 0.4, 0.5, 0.6, 0.75, 1.0, 60.0, 100, 'anomaly', 'blacklisted', 'config', 'consecutive_alarms', 'critical', 'event_callbacks', 'generated_at', 'high', 'is_blacklisted', 'level_change', 'low', 'modality', 'moderate', 'n_anomalies', 'n_observations', 'reinstated', 'sensors', 'trust_level', 'trust_score']

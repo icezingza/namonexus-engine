@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\hierarchical_bayesian.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1e-12, 1e-09, 0.1, 0.5, 0.95, 1.0, 2.0, 5.0, 500.0, '%Y-%m-%dT%H:%M:%SZ', 'FederatedDelta', 'HierarchicalConfig', 'blended', 'config', 'individual', 'mean', 'n_subjects', 'phi_ratio', 'population', 'site_id', 'tau must be > 0', 'uncertainty']

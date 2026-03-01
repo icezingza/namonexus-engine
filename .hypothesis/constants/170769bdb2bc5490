@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\phase2_fusion.py
+# hypothesis_version: 6.151.9
+
+[0.01, 1.0, 'Phase2GoldenFusion', '__dict__', 'best_score', 'calibrated_conf', 'calibration', 'config_swaps', 'consistency', 'current_config', 'dropped_obs', 'n_evaluations', 'n_generations', 'optimizer', 'phase2', 'raw_confidence', 'sensors', 'trust', 'unknown']

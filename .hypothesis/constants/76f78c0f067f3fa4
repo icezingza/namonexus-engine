@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\golden_bayesian.py
+# hypothesis_version: 6.151.9
+
+[0.5, 1.0, 2.0, 10.0, 'GoldenBayesianFusion', '_total_obs_count', 'alpha', 'beta', 'confidence', 'config', 'engine_version', 'fused_score', 'high', 'inf', 'low', 'medium', 'modality', 'modality_history', 'n_observations', 'phi_ratio', 'risk_level', 'score', 'timestamp', 'uncertainty', 'unknown']

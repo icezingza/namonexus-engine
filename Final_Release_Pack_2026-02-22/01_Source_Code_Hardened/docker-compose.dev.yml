@@ -1,0 +1,11 @@
+services:
+  api:
+    image: namonexus-fusion:dev
+    container_name: namonexus-fusion-dev
+    env_file:
+      - .env.compose.dev
+    environment:
+      NAMONEXUS_ALLOW_INSECURE_DEV_KEY: "false"
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    volumes:
+      - ./:/app

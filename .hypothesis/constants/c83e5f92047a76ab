@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\modality_calibrator.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.1, 0.3, 0.5, 1.0, 200, ', ', 'ALL', 'confidence', 'fused_score', 'fused_score_before', 'modality', 'modality_name', 'n_updates', 'observation_score', 'raw_confidence', 'reward_rate', 'score', 'tau_alpha', 'tau_beta', 'trust_mean', 'trust_uncertainty']

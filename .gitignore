@@ -1,0 +1,18 @@
+# Security & Secrets
+.env
+.env.*
+! .env.example
+!.env.compose.dev.example
+!.env.compose.prod.example
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Sensitive Internal Docs
+docs/PATENT_CLAIMS.md
+SECURITY.md
+OPERATIONAL_SECURITY.md

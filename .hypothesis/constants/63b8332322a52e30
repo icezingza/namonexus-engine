@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\phase3_fusion.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.45, 0.5, 0.75, 1.0, 2.0, 5.0, 10.0, 'Phase2GoldenFusion', 'Phase3GoldenFusion', '_MinimalFusionStub', 'alpha', 'beta', 'confidence', 'config', 'drift', 'fused_score', 'high', 'low', 'max_queue', 'medium', 'modality', 'risk_level', 'score', 'streaming', 'uncertainty', 'unknown', 'window_size']

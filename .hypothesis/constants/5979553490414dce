@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\api.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1.0, 256, 300, 404, 600, 1000, 3600, 10000, ',', '/v1/fusion/reset', '/v1/fusion/update', '/v1/health', '1', '4.0.0', 'Cache-Control', 'Content-Type', 'DENY', 'GET', 'NAMONEXUS_API_KEY', 'NamoNexus v4.0', 'POST', 'Pragma', 'Referrer-Policy', 'Session not found', 'X-API-Key', 'X-Frame-Options', '^[A-Za-z0-9._:-]+$', '^[A-Za-z0-9_-]+$', 'account_number', 'active_sessions', 'allowed_origins', 'api_key', 'attributions', 'auth', 'authorization', 'cache_info', 'card', 'configured', 'cookie', 'cors', 'credit', 'cvv', 'email', 'http', 'iban', 'lawful_basis', 'maxsize', 'narrative', 'no-cache', 'no-referrer', 'no-store', 'nosniff', 'ok', 'on', 'passwd', 'password', 'phone', 'processor', 'reset', 'secret', 'section_40_audit', 'session_id', 'ssn', 'status', 'timestamp', 'token', 'true', 'ttl', 'unknown', 'unspecified', 'yes']

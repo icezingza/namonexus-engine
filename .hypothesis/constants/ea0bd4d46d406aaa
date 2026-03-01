@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\streaming_pipeline.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.01, 0.5, 1.0, 2.0, 5.0, 1000.0, 100, 1000, 10000, 'InMemoryConnector', 'KafkaConnector', 'StreamingObservation', 'WebSocketConnector', 'acknowledged', 'backpressure', 'critical', 'drift_event', 'failed', 'fused_score', 'high', 'is_paused', 'ledger', 'localhost:9092', 'max_depth', 'medium', 'moderate', 'n_errors', 'n_processed', 'namonexus', 'normal', 'obs_id', 'pause', 'pending', 'processing', 'resume', 'risk_level', 'session_id', 'source', 'status', 'subject_id', 'uncertainty', 'unknown', 'window']

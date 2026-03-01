@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\hierarchical_bayes.py
+# hypothesis_version: 6.151.9
+
+[0.0, 0.01, 0.1, 0.25, 0.45, 0.5, 0.75, 1.0, 2.0, 5.0, 10.0, 10000.0, 'HierarchicalConfig', 'LocalModel', 'aggregation_count', 'alpha', 'alpha_init', 'alpha_new', 'alpha_prev', 'beta', 'beta_init', 'beta_new', 'beta_prev', 'client_id', 'client_stats', 'concentration', 'confidence', 'converged', 'deltas', 'fused_score', 'high', 'inf', 'last_delta', 'low', 'mean', 'medium', 'modality', 'modality_history', 'no_eligible_clients', 'num_eligible', 'obs', 'obs_count', 'phi_ratio', 'phi_weights', 'population_mean_new', 'reason', 'risk_level', 'round', 'rounds', 'score', 'skipped', 'status', 'timestamp', 'uncertainty', 'unknown', 'variance']

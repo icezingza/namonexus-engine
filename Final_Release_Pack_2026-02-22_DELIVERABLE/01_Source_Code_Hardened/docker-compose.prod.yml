@@ -1,0 +1,15 @@
+services:
+  api:
+    image: namonexus-fusion:prod
+    container_name: namonexus-fusion-prod
+    env_file:
+      - .env.compose.prod
+    environment:
+      NAMONEXUS_ALLOW_INSECURE_DEV_KEY: "false"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

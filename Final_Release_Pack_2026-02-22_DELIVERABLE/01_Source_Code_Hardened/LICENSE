@@ -1,0 +1,41 @@
+NamoNexus Proprietary Software License
+Version 1.0 - February 22, 2026
+
+Copyright (c) 2026 Kanin Raksaraj (P'Ice).
+All rights reserved.
+
+1. Scope
+This repository is proprietary software. No right to use, copy, modify,
+distribute, sublicense, host, or commercialize is granted except under a
+separate signed agreement with the copyright owner.
+
+2. Ownership
+All source code, documentation, models, and related materials in this
+repository are and remain the exclusive property of the copyright owner.
+
+3. Restrictions
+Without explicit written permission, you must not:
+- publish or redistribute this software;
+- provide it as a hosted service to third parties;
+- remove legal notices, authorship, or attribution text;
+- reverse engineer proprietary parts except where mandatory law forbids
+  restricting that right.
+
+4. Third-Party Components
+This repository depends on third-party open-source software. Those components
+remain under their original licenses. See NOTICE.txt for attribution and
+license summary. Your use of those components must comply with their terms.
+
+5. No Warranty
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+6. Liability Limitation
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT OWNER SHALL NOT BE
+LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
+DAMAGES ARISING FROM THE USE OF THIS SOFTWARE.
+
+7. Governing Terms
+If a signed commercial agreement exists, that agreement supersedes conflicting
+terms in this file for the covered parties.

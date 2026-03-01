@@ -1,0 +1,4 @@
+# file: D:\downloads\namonexus_unified_v4\namonexus_unified\namonexus_fusion\core\empirical_prior.py
+# hypothesis_version: 6.151.9
+
+[-0.3, 0.0, 1e-09, 1e-06, 0.02, 0.05, 0.06, 0.08, 0.09, 0.1, 0.12, 0.15, 0.18, 0.2, 0.25, 0.28, 0.35, 0.5, 0.55, 0.6, 0.65, 0.7, 0.8, 0.82, 0.95, 0.98, 0.99, 1.0, 2.0, 50.0, 1000000000000.0, 2000, '%Y-%m-%dT%H:%M:%SZ', '-inf', 'Nelder-Mead', 'calm', 'deceptive', 'face', 'fatol', 'full', 'incremental', 'maxiter', 'state', 'stressed', 'subject_calm', 'subject_deceptive', 'subject_neutral', 'subject_tense', 'subject_variable', 'text', 'true_score', 'voice', 'xatol']

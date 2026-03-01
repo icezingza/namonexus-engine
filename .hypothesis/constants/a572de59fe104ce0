@@ -1,0 +1,4 @@
+# file: D:\Users\Namo-empathy-engine\namonexus_fusion\core\explainability.py
+# hypothesis_version: 6.151.9
+
+[0.0, 1e-12, 1e-09, 0.4, 0.5, 0.65, 1.0, 2.0, 5.0, 10.0, 100.0, 200, '%Y-%m-%dT%H:%M:%SZ', '1.0.0', 'ExplanationConfig', '_alpha0', '_beta0', 'alignment', 'audit_version', 'confidences', 'consistent', 'consistent with', 'contradicting', 'contributions', 'eff_weight', 'fused_before', 'fused_score', 'high', 'low', 'lowered', 'marginal', 'mean_conf', 'mean_score', 'medium', 'mixed', 'modality', 'n_obs', 'narrative', 'phi_weight', 'prior_attribution', 'raised', 'scores', 'trust_factors', 'weighted_shapley']
