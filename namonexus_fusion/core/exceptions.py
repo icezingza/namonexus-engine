@@ -26,3 +26,7 @@ class SensorBlacklistError(NamoNexusError):
 
 class OptimizerError(NamoNexusError):
     """Raised on hyperparameter optimization failure."""
+
+
+class MathematicalError(NamoNexusError):
+    """Raised when Bayesian calculations encounter illegal states (e.g. division by zero)."""

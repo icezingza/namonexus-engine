@@ -28,7 +28,7 @@ from scipy.stats import beta as beta_dist  # type: ignore
 
 from ..config.settings import FusionConfig
 from ..core.constants import GOLDEN_RATIO, RISK_LOW_THRESHOLD, RISK_MEDIUM_THRESHOLD, RISK_HIGH_THRESHOLD
-from ..core.exceptions import InvalidObservationError
+from ..core.exceptions import InvalidObservationError, MathematicalError
 from ..utils.validators import validate_score, validate_confidence
 
 logger = logging.getLogger(__name__)
@@ -81,7 +81,11 @@ class GoldenBayesianFusion:
     @property
     def fused_score(self) -> float:
         """Posterior mean of the Beta distribution: α / (α + β)."""
-        return self._alpha / (self._alpha + self._beta)
+        denom = self._alpha + self._beta
+        if denom == 0:
+            logger.warning("Both alpha and beta are zero. Defaulting fused_score to 0.5.")
+            return 0.5
+        return self._alpha / denom
 
     @property
     def uncertainty(self) -> float:
@@ -92,6 +96,8 @@ class GoldenBayesianFusion:
         """
         a, b = self._alpha, self._beta
         n = a + b
+        if n == 0:
+            return 0.5  # Maximum uncertainty
         return float(np.sqrt(a * b / (n * n * (n + 1))))
 
     @property
@@ -204,7 +210,11 @@ class GoldenBayesianFusion:
         """P(score > threshold) under the current Beta posterior."""
         # ``confidence`` is accepted for backward compatibility with older APIs.
         _ = confidence
-        return float(1.0 - beta_dist.cdf(threshold, self._alpha, self._beta))
+        try:
+            return float(1.0 - beta_dist.cdf(threshold, self._alpha, self._beta))
+        except Exception as exc:
+            logger.error("Failed to compute deception_probability: %s", exc)
+            raise MathematicalError(f"Deception probability error: {exc}") from exc
 
     def credible_interval(self, credibility: float = 0.95) -> Tuple[float, float]:
         """
@@ -219,9 +229,16 @@ class GoldenBayesianFusion:
         (lower, upper) bounds.
         """
         alpha_ci = (1.0 - credibility) / 2.0
-        lo = float(beta_dist.ppf(alpha_ci, self._alpha, self._beta))
-        hi = float(beta_dist.ppf(1.0 - alpha_ci, self._alpha, self._beta))
-        return lo, hi
+        if (self._alpha + self._beta) == 0:
+            return 0.0, 1.0
+        try:
+            lo = float(beta_dist.ppf(alpha_ci, self._alpha, self._beta))
+            hi = float(beta_dist.ppf(1.0 - alpha_ci, self._alpha, self._beta))
+            return lo, hi
+        except Exception as exc:
+            logger.error("Failed to compute credible_interval: %s", exc)
+            # Fail safe: return full range [0, 1] if logic fails
+            return 0.0, 1.0
 
     # ── State persistence ────────────────────────────────────────────────────
 

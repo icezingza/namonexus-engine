@@ -12,6 +12,7 @@ from __future__ import annotations
 import logging
 import os
 import secrets
+import traceback
 from typing import Annotated, Any, Dict, Optional
 
 from cachetools import TTLCache
@@ -213,6 +214,20 @@ async def require_api_key(
     auth_failures.pop(client_ip, None)
 
 
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    """
+    Catch-all for unhandled exceptions.
+    Prevents leaking raw stack traces to the client and ensures a structured response.
+    """
+    logger.error("Unhandled exception: %s\n%s", exc, traceback.format_exc())
+    return {
+        "detail": "An internal server error occurred.",
+        "type": "internal_error",
+        "session_id": getattr(request.state, "session_id", None)
+    }
+
+
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
     response = await call_next(request)
@@ -230,6 +245,7 @@ async def update_session(payload: FusionUpdate):
         engines[payload.session_id] = RobustFusionPipeline()
 
     engine = engines[payload.session_id]
+    request.state.session_id = payload.session_id  # For exception handler context
     safe_metadata = _sanitize_metadata(payload.metadata)
 
     try:
@@ -283,7 +299,15 @@ async def get_diagnostics(
 ):
     if session_id not in engines:
         raise HTTPException(status_code=404, detail="Session not found")
-    return engines[session_id].get_diagnostics()
+    
+    try:
+        return engines[session_id].get_diagnostics()
+    except Exception as exc:
+        logger.error("Failed to retrieve diagnostics for session %s: %s", session_id, exc)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to retrieve engine diagnostics"
+        ) from exc
 
 
 @app.get("/v1/health")

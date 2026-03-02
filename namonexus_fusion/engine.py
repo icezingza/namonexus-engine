@@ -180,13 +180,25 @@ class NamoNexusEngine(Phase4GoldenFusion):
                 {"score": 0.60, "confidence": 0.85, "modality": "face"},
             ])
         """
-        for obs in observations:
-            self.update(
-                score         = float(obs["score"]),
-                confidence    = float(obs["confidence"]),
-                modality_name = obs.get("modality") or obs.get("modality_name"),
-                metadata      = obs.get("metadata"),
+        failed_indices: List[int] = []
+        for idx, obs in enumerate(observations):
+            try:
+                self.update(
+                    score         = float(obs["score"]),
+                    confidence    = float(obs["confidence"]),
+                    modality_name = obs.get("modality") or obs.get("modality_name"),
+                    metadata      = obs.get("metadata"),
+                )
+            except Exception as exc:
+                logger.error("Observation at index %d failed: %s", idx, exc)
+                failed_indices.append(idx)
+        
+        if failed_indices:
+            logger.warning(
+                "Batch update completed with %d failures at indices: %s",
+                len(failed_indices), failed_indices
             )
+        
         return self
 
     # ------------------------------------------------------------------
