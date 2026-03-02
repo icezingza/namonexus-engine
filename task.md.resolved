@@ -1,0 +1,7 @@
+# Performance Bottleneck Identification
+
+- [ ] Analyze existing benchmark results and scripts <!-- id: 0 -->
+- [ ] Profile the codebase using cProfile or similar tool <!-- id: 1 -->
+- [ ] Identify hot paths and inefficient logic <!-- id: 2 -->
+- [ ] Document findings and propose optimizations <!-- id: 3 -->
+- [ ] Implement recommended fixes (if requested) <!-- id: 4 -->
