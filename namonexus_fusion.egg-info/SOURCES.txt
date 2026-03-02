@@ -34,6 +34,7 @@ namonexus_fusion/core/temporal_filter.py
 namonexus_fusion/core/temporal_golden_fusion.py
 namonexus_fusion/tests/__init__.py
 namonexus_fusion/tests/test_api_security.py
+namonexus_fusion/tests/test_error_handling.py
 namonexus_fusion/tests/test_phase1.py
 namonexus_fusion/tests/test_phase2.py
 namonexus_fusion/tests/test_phase3.py
